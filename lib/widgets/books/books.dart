@@ -8,7 +8,6 @@ class Books extends StatelessWidget {
   Widget build(BuildContext context) {
     final BookController bookController = BookController();
     bookController.callApi();
-
     return Padding(
       padding: const EdgeInsets.all(4),
       child: AnimatedBuilder(
@@ -21,7 +20,15 @@ class Books extends StatelessWidget {
                       crossAxisCount: 3),
                   itemCount: bookController.books.value.length,
                   itemBuilder: ((_, index) => TextButton(
-                        onPressed: (() => {}),
+                        onPressed: (() => {
+                              Navigator.pushNamed(context, '/eachbook',
+                                  arguments: {
+                                    'book':
+                                        bookController.books.value[index].name,
+                                        'abbrev': bookController
+                                          .books.value[index].abbrev.pt
+                                  })
+                            }),
                         child: GridTile(
                             child: Container(
                                 width: double.infinity,

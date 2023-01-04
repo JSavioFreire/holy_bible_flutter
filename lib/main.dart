@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:holy_bible_flutter/page/books/book_page.dart';
+import 'package:holy_bible_flutter/page/each_book/each_book.dart';
 import 'package:holy_bible_flutter/page/home/home_page.dart';
 import 'package:holy_bible_flutter/page/login/login_page.dart';
+import 'package:holy_bible_flutter/page/random/random_page.dart';
 import 'package:holy_bible_flutter/theme/theme.dart';
 
 void main() {
@@ -18,8 +21,11 @@ class MyApp extends StatelessWidget {
       theme: theme,
       initialRoute: '/home',
       routes: {
-        '/login' : (context) => const LoginPage(),
+        '/login': (context) => const LoginPage(),
         '/home': (context) => const HomePage(),
+        '/books': (context) => const BookPage(),
+        '/random':(context) => const RandomPage(),
+        '/eachbook':(context) => const EachBook(),
       },
     );
   }

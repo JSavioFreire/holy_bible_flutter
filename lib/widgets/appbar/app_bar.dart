@@ -7,14 +7,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       actions: [
-        Padding(
-          padding: const EdgeInsets.only(top: 12, left: 5, right: 5),
-          child: IconButton(
-            onPressed: () => Scaffold.of(context).openEndDrawer(),
-            icon: const Icon(
-              Icons.menu,
-              size: 35,
-            ),
+        IconButton(
+          onPressed: () => Scaffold.of(context).openEndDrawer(),
+          icon: const Icon(
+            Icons.menu,
+            size: 35,
           ),
         ),
       ],
@@ -22,15 +19,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: const [
-          Padding(
-            padding: EdgeInsets.only(top: 20, left: 5, right: 5),
-            child: Center(
-              child: Text('Bíblia Sagrada',
-                  style: TextStyle(
-                      fontSize: 25,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w900)),
-            ),
+          Center(
+            child: Text('Bíblia Sagrada',
+                style: TextStyle(
+                    fontSize: 25,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w900)),
           ),
         ],
       ),
@@ -38,5 +32,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight + 20);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight + 5);
 }
