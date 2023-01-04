@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:holy_bible_flutter/widgets/appbar/app_bar.dart';
+import 'package:holy_bible_flutter/widgets/appbar/drawer.dart';
 import 'package:holy_bible_flutter/widgets/books/books.dart';
 import 'package:holy_bible_flutter/widgets/constVerse/const_verse.dart';
 import 'package:holy_bible_flutter/widgets/random/random_verse.dart';
@@ -10,7 +11,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-        appBar: CustomAppBar(),
-        body:  Books());
+        appBar: CustomAppBar(), endDrawer: CustomDrawer(), body: Books());
   }
 }
