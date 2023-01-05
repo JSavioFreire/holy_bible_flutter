@@ -46,7 +46,17 @@ class Chapter extends StatelessWidget {
                               style: ElevatedButton.styleFrom(
                                   backgroundColor:
                                       Theme.of(context).primaryColor),
-                              onPressed: (() => {}),
+                              onPressed: (() => {
+                                    Navigator.pushNamed(
+                                      context,
+                                      '/chapter',
+                                      arguments: {
+                                        'abbrev': eachBookController
+                                            .eachBook.value['abbrev'],
+                                        'chapter': index + 1
+                                      },
+                                    )
+                                  }),
                               child: Text('${index + 1}')))),
                     ),
                     eachBookController.eachBook.value['comment'] == ''

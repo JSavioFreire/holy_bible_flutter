@@ -13,7 +13,6 @@ class EachBookController {
           .get(Uri.parse('https://www.abibliadigital.com.br/api/books/$e'));
       var res = jsonDecode(response.body);
       eachBook.value = res;
-      print('https://www.abibliadigital.com.br/api/books/$e');
     } finally {
       client.close();
       inLoadBook.value = false;
