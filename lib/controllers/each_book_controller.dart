@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class EachBookController {
-  ValueNotifier book = ValueNotifier([]);
-  ValueNotifier inLoadBooks = ValueNotifier(true);
+  ValueNotifier eachBook = ValueNotifier([]);
+  ValueNotifier inLoadBook = ValueNotifier(true);
 
   callApi(e) async {
     var client = http.Client();
@@ -12,10 +12,11 @@ class EachBookController {
       var response = await client
           .get(Uri.parse('https://www.abibliadigital.com.br/api/books/$e'));
       var res = jsonDecode(response.body);
-      book.value = res;
+      eachBook.value = res;
+      print('https://www.abibliadigital.com.br/api/books/$e');
     } finally {
       client.close();
-      inLoadBooks.value = false;
+      inLoadBook.value = false;
     }
   }
 }
