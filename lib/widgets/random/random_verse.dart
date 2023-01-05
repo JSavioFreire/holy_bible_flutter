@@ -41,7 +41,13 @@ class RandomVerse extends StatelessWidget {
                     ],
                   ),
                   ElevatedButton(
-                    onPressed: () => {},
+                    onPressed: () => {
+                      Navigator.pushNamed(context, '/chapter', arguments: {
+                        'abbrev': randomController.randomVerse.value['book']
+                            ['abbrev']['pt'],
+                        'chapter': randomController.randomVerse.value['chapter']
+                      })
+                    },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Theme.of(context).primaryColor),
                     child: const Text('Leia todo o capítulo.'),

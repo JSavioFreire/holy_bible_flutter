@@ -52,7 +52,7 @@ class Chapter extends StatelessWidget {
                                       '/chapter',
                                       arguments: {
                                         'abbrev': eachBookController
-                                            .eachBook.value['abbrev'],
+                                            .eachBook.value['abbrev']['pt'],
                                         'chapter': index + 1
                                       },
                                     )
