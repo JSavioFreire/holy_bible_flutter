@@ -43,16 +43,11 @@ class CustomDrawer extends StatelessWidget {
               ),
               ListTile(
                 leading: const Icon(Icons.article_rounded),
-                title: const Text('Versículo Aleatório'),
+                title: const Text('Caixinha de promessas'),
                 onTap: () => {
                   Navigator.of(context).pushNamedAndRemoveUntil(
                       '/random', (Route route) => false)
                 },
-              ),
-              ListTile(
-                leading: const Icon(Icons.settings),
-                title: const Text('Configurações'),
-                onTap: () => {Navigator.of(context).pop()},
               ),
             ],
           ),

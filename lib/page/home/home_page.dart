@@ -13,9 +13,7 @@ class HomePage extends StatelessWidget {
         endDrawer: const CustomDrawer(),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 30),
-          child: Column(
-            children: const [Why()],
-          ),
+          child: Column(children: const [Why()]),
         ));
   }
 }
